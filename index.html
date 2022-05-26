@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper container">
+      <!-- title -->
+      <div class="title text-center mt-5 mb-5">
+        <h1>Weekly Hours Management</h1>
+      </div>
+      <!-- form -->
+      <form action="javascript:void(0)" onsubmit="handleOnSubmit(this)">
+        <div class="row g-3">
+          <div class="col-md-6">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Task Name"
+              name="task"
+              required
+              value="watch tv"
+            />
+          </div>
+          <div class="col-md-3">
+            <input
+              type="Number"
+              class="form-control"
+              placeholder="Hours"
+              name="hr"
+              value="5"
+              required
+            />
+          </div>
+          <div class="col-md-3">
+            <button type="submit" class="form-control btn btn-primary">
+              Add Task
+            </button>
+          </div>
+        </div>
+      </form>
+
+      <div class="row text__white">
+        <div class="col-md-6">
+          <div class="task-table mt-3 mb-3">
+            <h2 class="text-center py-3">Entry List</h2>
+            <table class="table">
+              <tbody id="entryList"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="task-table mt-3 mb-3">
+            <h2 class="text-center py-3">Bad Task List</h2>
+            <table class="table">
+              <tbody id="badList"></tbody>
+            </table>
+            <h5 class="text-end">
+              You could have saved <span id="badTtlHr"></span>hr/week
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="text-center mt-3 fs-3">
+          Total weekly hours allocated = <span id="totalHours">0</span> hr
+        </div>
+      </div>
+    </div>
+    <hr />
+
+    <!-- left table and right talbe -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>

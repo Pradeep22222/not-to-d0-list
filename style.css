@@ -1,0 +1,17 @@
+body {
+  min-height: 100vh;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 0, 0.373),
+    rgba(0, 128, 0, 0.601)
+  );
+}
+.task-table {
+  background: rgba(151, 234, 143, 0.371);
+  padding: 1rem;
+  box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.592);
+  backdrop-filter: blur(0.3rem);
+}
+.table {
+  background-color: rgba(255, 255, 255, 0.833);
+}
